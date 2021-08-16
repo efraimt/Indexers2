@@ -48,15 +48,19 @@ namespace Indexers2
             }
         }
 
-        public Student[] this[int grade, int age]
+        public Student[] this[int grade]
         {
             get
             {
+                int i=0;
                 Student[] bestStudents = new Student[1000];
                 foreach (var student in students)
                 {
                     if (student.Grade > grade)
+                    {
                         bestStudents[i] = student;
+                        i++;
+                    }
                 }
                 return bestStudents;
             }
