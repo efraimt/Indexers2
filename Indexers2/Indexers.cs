@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,7 +53,7 @@ namespace Indexers2
         {
             get
             {
-                int i=0;
+                int i = 0;
                 Student[] bestStudents = new Student[1000];
                 foreach (var student in students)
                 {
@@ -67,6 +68,25 @@ namespace Indexers2
         }
 
 
+    }
+
+    public class Sidra
+    {
+        public int this[int j]
+        {
+            get
+            {
+                int x = 1;
+                //Debug.WriteLine(x);
+                for (int i = 0; i < j; i++)
+                {
+                    x += 2;
+                    //Debug.WriteLine(x);
+                    
+                }
+                return x;
+            }
+        }
     }
 
 }

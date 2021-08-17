@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,8 +39,16 @@ namespace Indexers2
         private void button3_Click(object sender, EventArgs e)
         {
             int grade = 85;
-            Student[] studendsArray = students[grade,29];
-            
+            Student[] studendsArray = students[grade];
+            DateTime dt = new DateTime(2000, 10, 29);
+       
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int x = new Sidra()[2];
+            Debug.WriteLine(x);
+            Debug.WriteLine(new Sidra()[5]);
         }
     }
 }
