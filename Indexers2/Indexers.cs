@@ -7,10 +7,14 @@ using System.Threading.Tasks;
 
 namespace Indexers2
 {
-    public class Student
-    {
+    public class Entity {
         public int Id { get; set; }
         public string Name { get; set; }
+    }
+
+    public class Student:Entity
+    {
+      
         public int Age { get; set; }
         public int Grade { get; set; }
 
