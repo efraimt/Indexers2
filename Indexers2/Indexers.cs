@@ -13,11 +13,29 @@ namespace Indexers2
         public string Name { get; set; }
         public int Age { get; set; }
         public int Grade { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 
     public class StudentManagament
     {
         Student[] students = new Student[1000];
+
+        public void AddStudent(Student student) {
+            students[Count++] = student;
+        }
+
+        public void AddStudent(int id, string name  )
+        {
+            students[Count++] = new Student() { Id=id, Name=name};
+        }
+
+        public void RemoveStudent() {
+        
+        }
         public int Count { get; set; }
 
         public Student? GetStudentById(int id)
